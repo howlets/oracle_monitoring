@@ -1,0 +1,12 @@
+version: "2.1"
+
+services:
+  oracle-exporter:
+    image: iamseth/oracledb_exporter:latest
+    volumes:
+      - ./:/tmp/
+    environment:
+      DATA_SOURCE_NAME: system/password@oracle/xe
+      CUSTOM_METRICS: /tmp/custom-metrics.toml
+    ports:
+      - "9161:9161"
