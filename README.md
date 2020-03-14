@@ -1,3 +1,6 @@
+Dashboards:
+![image](https://user-images.githubusercontent.com/61619927/76682347-1cf5e200-6604-11ea-8c2d-1e3f639e1f77.png) ![image](https://user-images.githubusercontent.com/61619927/76682361-3dbe3780-6604-11ea-8a7a-bb07daaec1a6.png)
+
 First of all you need to prepare exporter to collect metrics from Oracle:
 ```
 # Install and configure Prometheus Exporter - https://github.com/iamseth/oracledb_exporter
@@ -24,3 +27,4 @@ Grafana Dashboards:
 ```
 In dashboards directory you can find two dashboards which should be uploaded to Grafana
 ```
+
