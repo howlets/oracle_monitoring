@@ -16,6 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 81,
+  "iteration": 1584263826450,
   "links": [],
   "panels": [
     {
@@ -64,7 +65,7 @@
       "pluginVersion": "6.6.1",
       "targets": [
         {
-          "expr": "sum(oracledb_queriesPerformance_executions)",
+          "expr": "sum(increase(oracledb_queriesPerformance_executions[$Rate]))",
           "instant": false,
           "intervalFactor": 1,
           "legendFormat": "Number of executions",
@@ -118,7 +119,7 @@
       "pluginVersion": "6.6.1",
       "targets": [
         {
-          "expr": "sum(oracledb_queriesPerformance_disk_reads)",
+          "expr": "sum(increase(oracledb_queriesPerformance_disk_reads[$Rate]))",
           "instant": false,
           "intervalFactor": 1,
           "legendFormat": "Number of disk reads",
@@ -172,7 +173,7 @@
       "pluginVersion": "6.6.1",
       "targets": [
         {
-          "expr": "sum(oracledb_queriesPerformance_sharable_mem)",
+          "expr": "sum(increase(oracledb_queriesPerformance_sharable_mem[$Rate]))",
           "instant": false,
           "intervalFactor": 1,
           "legendFormat": "",
@@ -226,7 +227,7 @@
       "pluginVersion": "6.6.1",
       "targets": [
         {
-          "expr": "sum(oracledb_queriesPerformance_cpu_time)",
+          "expr": "sum(increase(oracledb_queriesPerformance_cpu_time[$Rate]))",
           "instant": false,
           "intervalFactor": 1,
           "legendFormat": "",
@@ -280,7 +281,7 @@
       "pluginVersion": "6.6.1",
       "targets": [
         {
-          "expr": "sum(oracledb_queriesPerformance_elapsed_time)",
+          "expr": "sum(increase(oracledb_queriesPerformance_elapsed_time[$Rate]))",
           "instant": false,
           "intervalFactor": 1,
           "legendFormat": "",
@@ -334,7 +335,7 @@
       "pluginVersion": "6.6.1",
       "targets": [
         {
-          "expr": "sum(oracledb_queriesPerformance_avg_elapsed)",
+          "expr": "sum(increase(oracledb_queriesPerformance_avg_elapsed[$Rate]))",
           "instant": false,
           "intervalFactor": 1,
           "legendFormat": "",
@@ -388,7 +389,7 @@
       "pluginVersion": "6.6.1",
       "targets": [
         {
-          "expr": "sum(oracledb_queriesPerformance_avg_cpu)",
+          "expr": "sum(increase(oracledb_queriesPerformance_avg_cpu[$Rate]))",
           "instant": false,
           "intervalFactor": 1,
           "legendFormat": "",
@@ -622,49 +623,49 @@
       ],
       "targets": [
         {
-          "expr": "sum(oracledb_queriesPerformance_disk_reads) by (sql_id, sql_fulltext, parsing_schema_name)",
+          "expr": "sum(increase(oracledb_queriesPerformance_disk_reads[$Rate])) by (sql_id, sql_fulltext, parsing_schema_name)",
           "format": "table",
           "instant": true,
           "intervalFactor": 1,
           "refId": "A"
         },
         {
-          "expr": "sum(oracledb_queriesPerformance_sharable_mem) by (sql_id, sql_fulltext, parsing_schema_name)",
+          "expr": "sum(increase(oracledb_queriesPerformance_sharable_mem[$Rate])) by (sql_id, sql_fulltext, parsing_schema_name)",
           "format": "table",
           "instant": true,
           "intervalFactor": 1,
           "refId": "B"
         },
         {
-          "expr": "sum(oracledb_queriesPerformance_cpu_time) by (sql_id, sql_fulltext, parsing_schema_name)",
+          "expr": "sum(increase(oracledb_queriesPerformance_cpu_time[$Rate])) by (sql_id, sql_fulltext, parsing_schema_name)",
           "format": "table",
           "instant": true,
           "intervalFactor": 1,
           "refId": "C"
         },
         {
-          "expr": "sum(oracledb_queriesPerformance_executions) by (sql_id, sql_fulltext, parsing_schema_name)",
+          "expr": "sum(increase(oracledb_queriesPerformance_executions[$Rate])) by (sql_id, sql_fulltext, parsing_schema_name)",
           "format": "table",
           "instant": true,
           "intervalFactor": 1,
           "refId": "D"
         },
         {
-          "expr": "sum(oracledb_queriesPerformance_elapsed_time) by (sql_id, sql_fulltext, parsing_schema_name)",
+          "expr": "sum(increase(oracledb_queriesPerformance_elapsed_time[$Rate])) by (sql_id, sql_fulltext, parsing_schema_name)",
           "format": "table",
           "instant": true,
           "intervalFactor": 1,
           "refId": "E"
         },
         {
-          "expr": "sum(oracledb_queriesPerformance_avg_elapsed) by (sql_id, sql_fulltext, parsing_schema_name)",
+          "expr": "sum(increase(oracledb_queriesPerformance_avg_elapsed[$Rate])) by (sql_id, sql_fulltext, parsing_schema_name)",
           "format": "table",
           "instant": true,
           "intervalFactor": 1,
           "refId": "F"
         },
         {
-          "expr": "sum(oracledb_queriesPerformance_avg_cpu) by (sql_id, sql_fulltext, parsing_schema_name)",
+          "expr": "sum(increase(oracledb_queriesPerformance_avg_cpu[$Rate])) by (sql_id, sql_fulltext, parsing_schema_name)",
           "format": "table",
           "instant": true,
           "intervalFactor": 1,
@@ -683,10 +684,55 @@
   "style": "dark",
   "tags": [],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "auto": false,
+        "auto_count": 30,
+        "auto_min": "10s",
+        "current": {
+          "selected": false,
+          "text": "30s",
+          "value": "30s"
+        },
+        "hide": 0,
+        "label": "Rate",
+        "name": "Rate",
+        "options": [
+          {
+            "selected": true,
+            "text": "30s",
+            "value": "30s"
+          },
+          {
+            "selected": false,
+            "text": "1m",
+            "value": "1m"
+          },
+          {
+            "selected": false,
+            "text": "10m",
+            "value": "10m"
+          },
+          {
+            "selected": false,
+            "text": "30m",
+            "value": "30m"
+          },
+          {
+            "selected": false,
+            "text": "1h",
+            "value": "1h"
+          }
+        ],
+        "query": "30s, 1m,10m,30m,1h",
+        "refresh": 2,
+        "skipUrlSync": false,
+        "type": "interval"
+      }
+    ]
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-15m",
     "to": "now"
   },
   "timepicker": {
@@ -706,5 +752,5 @@
   "timezone": "utc",
   "title": "Oracle Top 10 Queries",
   "uid": "hCnYGVlZk",
-  "version": 29
+  "version": 44
 }

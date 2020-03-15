@@ -3,7 +3,7 @@ context = "queriesPerformance"
 labels = ["sql_id", "sql_fulltext", "parsing_schema_name"]
 
 metricsdesc = { disk_reads="Number of disk reads for this child cursor", sharable_mem="Amount of shared memory used by the child cursor (in bytes)", cpu_time="CPU time (in microseconds) used by this cursor for parsing, executing, and fetching", executions="Number of executions that took place on this object since it was brought into the library cache", elapsed_time="Elapsed time (in microseconds) used by this cursor for parsing, executing, and fetching", avg_elapsed="Average elapsed time - elapsed_time/executions", avg_cpu="Average CPU time - cpu_time/executions" }
-metricstype = { disk_reads="gauge", sharable_mem="gauge", cpu_time="gauge", executions="gauge", elapsed_time="gauge", avg_elapsed="gauge", avg_cpu="gauge" }
+metricstype = { disk_reads="counter", sharable_mem="counter", cpu_time="counter", executions="counter", elapsed_time="counter", avg_elapsed="counter", avg_cpu="counter" }
 
 request = "SELECT * FROM (SELECT sql_id, sql_fulltext, parsing_schema_name, sharable_mem, disk_reads, elapsed_time, cpu_time, executions, elapsed_time/executions as avg_elapsed, cpu_time/executions as avg_cpu FROM v$sql where executions != 0 order by avg_elapsed desc) where rownum < 11"
 
