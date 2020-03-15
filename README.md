@@ -20,7 +20,7 @@ Or use docker-compose to run exporter:
 docker-compose -f docker-compose.yml up -d
 ```
 
-Grafana Dashboards:
+Grafana Dashboards *(Some dashboards contain "stat" panel which become available in Grafana Version 6.6)*:
 ```
 In dashboards directory you can find two dashboards which should be uploaded to Grafana
 ```
