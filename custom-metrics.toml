@@ -1,9 +1,9 @@
 [[metric]]
 context = "queriesPerformance"
-labels = ["sql_id", "sql_fulltext", "parsing_schema_name"]
+labels = ["sql_id", "sql_text"]
 
-metricsdesc = { disk_reads="Number of disk reads for this child cursor", sharable_mem="Amount of shared memory used by the child cursor (in bytes)", cpu_time="CPU time (in microseconds) used by this cursor for parsing, executing, and fetching", executions="Number of executions that took place on this object since it was brought into the library cache", elapsed_time="Elapsed time (in microseconds) used by this cursor for parsing, executing, and fetching", avg_elapsed="Average elapsed time - elapsed_time/executions", avg_cpu="Average CPU time - cpu_time/executions" }
-metricstype = { disk_reads="counter", sharable_mem="counter", cpu_time="counter", executions="counter", elapsed_time="counter", avg_elapsed="counter", avg_cpu="counter" }
+metricsdesc = { disk_reads="Number of disk reads for this child cursor", buffer_gets="Number of buffer gets for this child cursor", cpu_sec="CPU time (in seconds) used by this cursor for parsing, executing, and fetching", executions="Number of executions that took place on this object since it was brought into the library cache", elapsed_sec="Elapsed time (in seconds) used by this cursor for parsing, executing, and fetching", rows_procs="Total number of rows the parsed SQL statement returns", io_wait="I/O Wait Time (in microseconds)" }
+metricstype = { disk_reads="counter", buffer_gets="counter", cpu_sec="counter", executions="counter", elapsed_sec="counter", rows_procs="counter", io_wait="counter" }
 
-request = "SELECT * FROM (SELECT sql_id, sql_fulltext, parsing_schema_name, sharable_mem, disk_reads, elapsed_time, cpu_time, executions, elapsed_time/executions as avg_elapsed, cpu_time/executions as avg_cpu FROM v$sql where executions != 0 order by avg_elapsed desc) where rownum < 11"
+request = "select x.sql_id, x.elapsed_sec, x.cpu_sec, x.executions, x.disk_reads, x.buffer_gets, x.rows_procs, x.io_wait, substr(dhst.sql_text, 1, 80) sql_text from dba_hist_sqltext dhst, (select * from (select dhs.sql_id sql_id, round(sum(dhs.elapsed_time_delta)/1000000) elapsed_sec, round(sum(dhs.cpu_time_delta)/1000000) cpu_sec, sum(dhs.executions_delta) executions, sum(dhs.disk_reads_delta) disk_reads, sum(dhs.buffer_gets_delta) buffer_gets, sum(dhs.rows_processed_delta) rows_procs, sum(dhs.iowait_delta) io_wait from dba_hist_sqlstat dhs, dba_hist_snapshot sh where dhs.snap_id = sh.snap_id and sh.begin_interval_time >= trunc(sysdate - 1/24)-1 group by dhs.sql_id order by elapsed_sec desc nulls last) where  rownum <=10)x where x.sql_id=dhst.sql_id order by elapsed_sec desc;"
 

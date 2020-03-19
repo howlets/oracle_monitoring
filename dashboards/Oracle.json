@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 98,
-  "iteration": 1584277894946,
+  "iteration": 1584636683702,
   "links": [],
   "panels": [
     {
@@ -699,7 +699,7 @@
             "h": 8,
             "w": 24,
             "x": 0,
-            "y": 3
+            "y": 2
           },
           "id": 2,
           "links": [],
@@ -776,7 +776,7 @@
             "h": 9,
             "w": 12,
             "x": 0,
-            "y": 11
+            "y": 10
           },
           "hiddenSeries": false,
           "id": 8,
@@ -865,7 +865,7 @@
             "h": 9,
             "w": 12,
             "x": 12,
-            "y": 11
+            "y": 10
           },
           "hiddenSeries": false,
           "id": 3,
@@ -953,7 +953,7 @@
             "h": 8,
             "w": 24,
             "x": 0,
-            "y": 20
+            "y": 19
           },
           "hiddenSeries": false,
           "id": 4,
@@ -1049,7 +1049,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 28
+            "y": 27
           },
           "hiddenSeries": false,
           "id": 6,
@@ -1146,7 +1146,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 28
+            "y": 27
           },
           "hiddenSeries": false,
           "id": 10,
@@ -1243,7 +1243,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 36
+            "y": 35
           },
           "hiddenSeries": false,
           "id": 11,
@@ -1340,7 +1340,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 36
+            "y": 35
           },
           "hiddenSeries": false,
           "id": 13,
@@ -1437,7 +1437,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 44
+            "y": 43
           },
           "hiddenSeries": false,
           "id": 12,
@@ -1534,7 +1534,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 44
+            "y": 43
           },
           "hiddenSeries": false,
           "id": 14,
@@ -1631,7 +1631,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 52
+            "y": 51
           },
           "hiddenSeries": false,
           "id": 9,
@@ -1745,7 +1745,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 52
+            "y": 51
           },
           "hiddenSeries": false,
           "id": 7,
@@ -1859,7 +1859,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 60
+            "y": 59
           },
           "hiddenSeries": false,
           "id": 16,
@@ -1946,7 +1946,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 60
+            "y": 59
           },
           "hiddenSeries": false,
           "id": 17,
@@ -2033,7 +2033,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 68
+            "y": 67
           },
           "hiddenSeries": false,
           "id": 18,
@@ -2120,7 +2120,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 68
+            "y": 67
           },
           "hiddenSeries": false,
           "id": 21,
@@ -2207,7 +2207,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 76
+            "y": 75
           },
           "hiddenSeries": false,
           "id": 22,
@@ -2294,7 +2294,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 76
+            "y": 75
           },
           "hiddenSeries": false,
           "id": 23,
@@ -2381,7 +2381,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 84
+            "y": 83
           },
           "hiddenSeries": false,
           "id": 20,
@@ -2478,7 +2478,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 84
+            "y": 83
           },
           "hiddenSeries": false,
           "id": 19,
@@ -2579,7 +2579,7 @@
             "h": 5,
             "w": 4,
             "x": 0,
-            "y": 1
+            "y": 3
           },
           "id": 39,
           "options": {
@@ -2628,7 +2628,7 @@
             "h": 5,
             "w": 4,
             "x": 4,
-            "y": 1
+            "y": 3
           },
           "id": 40,
           "options": {
@@ -2677,7 +2677,7 @@
             "h": 5,
             "w": 4,
             "x": 8,
-            "y": 1
+            "y": 3
           },
           "id": 41,
           "options": {
@@ -2697,8 +2697,8 @@
                     }
                   ]
                 },
-                "title": "Amount of shared memory",
-                "unit": "bytes"
+                "title": "Number of buffer gets",
+                "unit": "short"
               },
               "overrides": [],
               "values": false
@@ -2710,7 +2710,7 @@
           "pluginVersion": "6.6.1",
           "targets": [
             {
-              "expr": "sum(increase(oracledb_queriesPerformance_sharable_mem[$Rate]))",
+              "expr": "sum(increase(oracledb_queriesPerformance_buffer_gets[$Rate]))",
               "legendFormat": "",
               "refId": "A"
             }
@@ -2726,7 +2726,7 @@
             "h": 5,
             "w": 3,
             "x": 12,
-            "y": 1
+            "y": 3
           },
           "id": 42,
           "options": {
@@ -2746,8 +2746,8 @@
                     }
                   ]
                 },
-                "title": "Total CPU time",
-                "unit": "µs"
+                "title": "CPU time",
+                "unit": "s"
               },
               "overrides": [],
               "values": false
@@ -2759,7 +2759,7 @@
           "pluginVersion": "6.6.1",
           "targets": [
             {
-              "expr": "sum(increase(oracledb_queriesPerformance_cpu_time[$Rate]))",
+              "expr": "sum(increase(oracledb_queriesPerformance_cpu_sec[$Rate]))",
               "legendFormat": "",
               "refId": "A"
             }
@@ -2775,7 +2775,7 @@
             "h": 5,
             "w": 3,
             "x": 15,
-            "y": 1
+            "y": 3
           },
           "id": 43,
           "options": {
@@ -2795,8 +2795,8 @@
                     }
                   ]
                 },
-                "title": "Total Elapsed time",
-                "unit": "µs"
+                "title": "Elapsed time",
+                "unit": "s"
               },
               "overrides": [],
               "values": false
@@ -2808,7 +2808,7 @@
           "pluginVersion": "6.6.1",
           "targets": [
             {
-              "expr": "sum(increase(oracledb_queriesPerformance_elapsed_time[$Rate]))",
+              "expr": "sum(increase(oracledb_queriesPerformance_elapsed_sec[$Rate]))",
               "legendFormat": "",
               "refId": "A"
             }
@@ -2824,7 +2824,7 @@
             "h": 5,
             "w": 3,
             "x": 18,
-            "y": 1
+            "y": 3
           },
           "id": 44,
           "options": {
@@ -2844,8 +2844,8 @@
                     }
                   ]
                 },
-                "title": "Avg elapsed time",
-                "unit": "µs"
+                "title": "Total number of rows the parsed",
+                "unit": "short"
               },
               "overrides": [],
               "values": false
@@ -2857,7 +2857,7 @@
           "pluginVersion": "6.6.1",
           "targets": [
             {
-              "expr": "sum(increase(oracledb_queriesPerformance_avg_elapsed[$Rate]))",
+              "expr": "sum(increase(oracledb_queriesPerformance_rows_procs[$Rate]))",
               "legendFormat": "",
               "refId": "A"
             }
@@ -2873,7 +2873,7 @@
             "h": 5,
             "w": 3,
             "x": 21,
-            "y": 1
+            "y": 3
           },
           "id": 45,
           "options": {
@@ -2893,7 +2893,7 @@
                     }
                   ]
                 },
-                "title": "Avg CPU time",
+                "title": "I/O Wait Time",
                 "unit": "µs"
               },
               "overrides": [],
@@ -2906,7 +2906,7 @@
           "pluginVersion": "6.6.1",
           "targets": [
             {
-              "expr": "sum(increase(oracledb_queriesPerformance_avg_cpu[$Rate]))",
+              "expr": "sum(increase(oracledb_queriesPerformance_io_wait[$Rate]))",
               "legendFormat": "",
               "refId": "A"
             }
@@ -2924,7 +2924,7 @@
             "h": 15,
             "w": 24,
             "x": 0,
-            "y": 6
+            "y": 8
           },
           "id": 47,
           "options": {},
@@ -2941,23 +2941,6 @@
               "dateFormat": "YYYY-MM-DD HH:mm:ss",
               "pattern": "Time",
               "type": "hidden"
-            },
-            {
-              "alias": "SCHEMA",
-              "align": "center",
-              "colorMode": null,
-              "colors": [
-                "rgba(245, 54, 54, 0.9)",
-                "rgba(237, 129, 40, 0.89)",
-                "rgba(50, 172, 45, 0.97)"
-              ],
-              "dateFormat": "YYYY-MM-DD HH:mm:ss",
-              "decimals": 2,
-              "mappingType": 1,
-              "pattern": "parsing_schema_name",
-              "thresholds": [],
-              "type": "string",
-              "unit": "short"
             },
             {
               "alias": "SQL_ID",
@@ -2981,7 +2964,7 @@
               "unit": "short"
             },
             {
-              "alias": "SQL_FULLTEXT",
+              "alias": "SQL_TEXT",
               "align": "auto",
               "colorMode": null,
               "colors": [
@@ -2992,7 +2975,7 @@
               "dateFormat": "YYYY-MM-DD HH:mm:ss",
               "decimals": 2,
               "mappingType": 1,
-              "pattern": "sql_fulltext",
+              "pattern": "sql_text",
               "thresholds": [],
               "type": "string",
               "unit": "short"
@@ -3015,7 +2998,7 @@
               "unit": "short"
             },
             {
-              "alias": "SHARABLE_MEM",
+              "alias": "BUFFER_GETS",
               "align": "center",
               "colorMode": null,
               "colors": [
@@ -3029,10 +3012,10 @@
               "pattern": "Value #B",
               "thresholds": [],
               "type": "number",
-              "unit": "bytes"
+              "unit": "short"
             },
             {
-              "alias": "CPU_TIME",
+              "alias": "CPU_SEC",
               "align": "center",
               "colorMode": null,
               "colors": [
@@ -3046,7 +3029,7 @@
               "pattern": "Value #C",
               "thresholds": [],
               "type": "number",
-              "unit": "µs"
+              "unit": "s"
             },
             {
               "alias": "EXECUTIONS",
@@ -3066,7 +3049,7 @@
               "unit": "short"
             },
             {
-              "alias": "ELAPSED_TIME",
+              "alias": "ELAPSED_SEC",
               "align": "center",
               "colorMode": null,
               "colors": [
@@ -3080,10 +3063,10 @@
               "pattern": "Value #E",
               "thresholds": [],
               "type": "number",
-              "unit": "µs"
+              "unit": "s"
             },
             {
-              "alias": "AVG_ELAPSED",
+              "alias": "ROWS_PROCESSED",
               "align": "center",
               "colorMode": null,
               "colors": [
@@ -3092,15 +3075,15 @@
                 "rgba(50, 172, 45, 0.97)"
               ],
               "dateFormat": "YYYY-MM-DD HH:mm:ss",
-              "decimals": 2,
+              "decimals": null,
               "mappingType": 1,
               "pattern": "Value #F",
               "thresholds": [],
               "type": "number",
-              "unit": "µs"
+              "unit": "short"
             },
             {
-              "alias": "AVG_CPU",
+              "alias": "IO_WAIT",
               "align": "center",
               "colorMode": null,
               "colors": [
@@ -3134,43 +3117,43 @@
           ],
           "targets": [
             {
-              "expr": "sum(increase(oracledb_queriesPerformance_disk_reads[$Rate])) by (sql_id, sql_fulltext, parsing_schema_name)",
+              "expr": "sum(increase(oracledb_queriesPerformance_disk_reads[$Rate])) by (sql_id, sql_text)",
               "format": "table",
               "instant": true,
               "refId": "A"
             },
             {
-              "expr": "sum(increase(oracledb_queriesPerformance_sharable_mem[$Rate])) by (sql_id, sql_fulltext, parsing_schema_name)",
+              "expr": "sum(increase(oracledb_queriesPerformance_buffer_gets[$Rate])) by (sql_id, sql_text)",
               "format": "table",
               "instant": true,
               "refId": "B"
             },
             {
-              "expr": "sum(increase(oracledb_queriesPerformance_cpu_time[$Rate])) by (sql_id, sql_fulltext, parsing_schema_name)",
+              "expr": "sum(increase(oracledb_queriesPerformance_cpu_sec[$Rate])) by (sql_id, sql_text)",
               "format": "table",
               "instant": true,
               "refId": "C"
             },
             {
-              "expr": "sum(increase(oracledb_queriesPerformance_executions[$Rate])) by (sql_id, sql_fulltext, parsing_schema_name)",
+              "expr": "sum(increase(oracledb_queriesPerformance_executions[$Rate])) by (sql_id, sql_text)",
               "format": "table",
               "instant": true,
               "refId": "D"
             },
             {
-              "expr": "sum(increase(oracledb_queriesPerformance_elapsed_time[$Rate])) by (sql_id, sql_fulltext, parsing_schema_name)",
+              "expr": "sum(increase(oracledb_queriesPerformance_elapsed_sec[$Rate])) by (sql_id, sql_text)",
               "format": "table",
               "instant": true,
               "refId": "E"
             },
             {
-              "expr": "sum(increase(oracledb_queriesPerformance_avg_elapsed[$Rate])) by (sql_id, sql_fulltext, parsing_schema_name)",
+              "expr": "sum(increase(oracledb_queriesPerformance_rows_procs[$Rate])) by (sql_id, sql_text)",
               "format": "table",
               "instant": true,
               "refId": "F"
             },
             {
-              "expr": "sum(increase(oracledb_queriesPerformance_avg_cpu[$Rate])) by (sql_id, sql_fulltext, parsing_schema_name)",
+              "expr": "sum(increase(oracledb_queriesPerformance_io_wait[$Rate])) by (sql_id, sql_text)",
               "format": "table",
               "instant": true,
               "refId": "G"
@@ -3238,7 +3221,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum(increase(oracledb_queriesPerformance_avg_elapsed{sql_id=\"$sql_id\"}[$Rate])) by (sql_id)",
+              "expr": "sum(increase(oracledb_queriesPerformance_rows_procs{sql_id=\"$sql_id\"}[$Rate])) by (sql_id)",
               "refId": "A"
             }
           ],
@@ -3246,7 +3229,7 @@
           "timeFrom": null,
           "timeRegions": [],
           "timeShift": null,
-          "title": "Average elapsed time",
+          "title": "Total number of rows the parsed SQL statement returns",
           "tooltip": {
             "shared": true,
             "sort": 0,
@@ -3262,7 +3245,7 @@
           },
           "yaxes": [
             {
-              "format": "µs",
+              "format": "short",
               "label": null,
               "logBase": 1,
               "max": null,
@@ -3324,7 +3307,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum(increase(oracledb_queriesPerformance_avg_cpu{sql_id=\"$sql_id\"}[$Rate])) by (sql_id)",
+              "expr": "sum(increase(oracledb_queriesPerformance_io_wait{sql_id=\"$sql_id\"}[$Rate])) by (sql_id)",
               "refId": "A"
             }
           ],
@@ -3332,7 +3315,7 @@
           "timeFrom": null,
           "timeRegions": [],
           "timeShift": null,
-          "title": "Average CPU time",
+          "title": "I/O Wait Time",
           "tooltip": {
             "shared": true,
             "sort": 0,
@@ -3582,7 +3565,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum(increase(oracledb_queriesPerformance_sharable_mem{sql_id=\"$sql_id\"}[$Rate])) by (sql_id)",
+              "expr": "sum(increase(oracledb_queriesPerformance_buffer_gets{sql_id=\"$sql_id\"}[$Rate])) by (sql_id)",
               "refId": "A"
             }
           ],
@@ -3590,7 +3573,7 @@
           "timeFrom": null,
           "timeRegions": [],
           "timeShift": null,
-          "title": "Amount of shared memory used by the child cursor",
+          "title": "Number of buffer gets for this child cursor",
           "tooltip": {
             "shared": true,
             "sort": 0,
@@ -3606,7 +3589,7 @@
           },
           "yaxes": [
             {
-              "format": "bytes",
+              "format": "short",
               "label": null,
               "logBase": 1,
               "max": null,
@@ -3668,7 +3651,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum(increase(oracledb_queriesPerformance_cpu_time{sql_id=\"$sql_id\"}[$Rate])) by (sql_id)",
+              "expr": "sum(increase(oracledb_queriesPerformance_cpu_sec{sql_id=\"$sql_id\"}[$Rate])) by (sql_id)",
               "refId": "A"
             }
           ],
@@ -3692,7 +3675,7 @@
           },
           "yaxes": [
             {
-              "format": "µs",
+              "format": "s",
               "label": null,
               "logBase": 1,
               "max": null,
@@ -3754,7 +3737,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum(increase(oracledb_queriesPerformance_elapsed_time{sql_id=\"$sql_id\"}[$Rate])) by (sql_id)",
+              "expr": "sum(increase(oracledb_queriesPerformance_elapsed_sec{sql_id=\"$sql_id\"}[$Rate])) by (sql_id)",
               "refId": "A"
             }
           ],
@@ -3778,7 +3761,7 @@
           },
           "yaxes": [
             {
-              "format": "µs",
+              "format": "s",
               "label": null,
               "logBase": 1,
               "max": null,
@@ -3857,7 +3840,6 @@
       {
         "allValue": null,
         "current": {
-          "selected": false,
           "text": "ccmf16m443973",
           "value": "ccmf16m443973"
         },
@@ -3903,5 +3885,5 @@
   "timezone": "",
   "title": "ASMPAT-Oracle",
   "uid": "-U2sVJwWz",
-  "version": 22
+  "version": 31
 }
