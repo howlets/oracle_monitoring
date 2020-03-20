@@ -2956,7 +2956,7 @@
               "link": true,
               "linkTargetBlank": true,
               "linkTooltip": "Investigate performance of specific query",
-              "linkUrl": "/d/-U2sVJwWz/oracle-query-performance?orgId=1&var-sql_id=$__cell_3",
+              "linkUrl": "/grafana/d/-U2sVJwWz/oracle-query-performance?orgId=1&var-sql_id=$__cell_3",
               "mappingType": 1,
               "pattern": "sql_id",
               "thresholds": [],
