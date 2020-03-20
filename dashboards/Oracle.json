@@ -21,7 +21,7 @@
   "panels": [
     {
       "collapsed": true,
-      "datasource": null,
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -683,7 +683,7 @@
     },
     {
       "collapsed": true,
-      "datasource": null,
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -2564,7 +2564,7 @@
     },
     {
       "collapsed": true,
-      "datasource": null,
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -2574,7 +2574,7 @@
       "id": 37,
       "panels": [
         {
-          "datasource": null,
+          "datasource": "Prometheus",
           "gridPos": {
             "h": 5,
             "w": 4,
@@ -2623,7 +2623,7 @@
           "type": "stat"
         },
         {
-          "datasource": null,
+          "datasource": "Prometheus",
           "gridPos": {
             "h": 5,
             "w": 4,
@@ -2672,7 +2672,7 @@
           "type": "stat"
         },
         {
-          "datasource": null,
+          "datasource": "Prometheus",
           "gridPos": {
             "h": 5,
             "w": 4,
@@ -2721,7 +2721,7 @@
           "type": "stat"
         },
         {
-          "datasource": null,
+          "datasource": "Prometheus",
           "gridPos": {
             "h": 5,
             "w": 3,
@@ -2770,7 +2770,7 @@
           "type": "stat"
         },
         {
-          "datasource": null,
+          "datasource": "Prometheus",
           "gridPos": {
             "h": 5,
             "w": 3,
@@ -2819,7 +2819,7 @@
           "type": "stat"
         },
         {
-          "datasource": null,
+          "datasource": "Prometheus",
           "gridPos": {
             "h": 5,
             "w": 3,
@@ -2868,7 +2868,7 @@
           "type": "stat"
         },
         {
-          "datasource": null,
+          "datasource": "Prometheus",
           "gridPos": {
             "h": 5,
             "w": 3,
@@ -2918,7 +2918,7 @@
         },
         {
           "columns": [],
-          "datasource": null,
+          "datasource": "Prometheus",
           "fontSize": "100%",
           "gridPos": {
             "h": 15,
@@ -3171,7 +3171,7 @@
     },
     {
       "collapsed": true,
-      "datasource": null,
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -3185,7 +3185,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "Prometheus",
           "fill": 0,
           "fillGradient": 2,
           "gridPos": {
@@ -3271,7 +3271,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "Prometheus",
           "fill": 0,
           "fillGradient": 2,
           "gridPos": {
@@ -3357,7 +3357,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "Prometheus",
           "fill": 0,
           "fillGradient": 2,
           "gridPos": {
@@ -3443,7 +3443,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "Prometheus",
           "fill": 0,
           "fillGradient": 2,
           "gridPos": {
@@ -3529,7 +3529,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "Prometheus",
           "fill": 0,
           "fillGradient": 2,
           "gridPos": {
@@ -3615,7 +3615,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "Prometheus",
           "fill": 0,
           "fillGradient": 2,
           "gridPos": {
@@ -3701,7 +3701,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "Prometheus",
           "fill": 0,
           "fillGradient": 2,
           "gridPos": {
